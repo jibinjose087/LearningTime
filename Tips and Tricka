@@ -1,0 +1,12 @@
+Tips and Tricks
+
+Collecting ansible==2.3.0.0
+  Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', NewConnectionError('<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x2263590>: Failed to establish a new connection: [Errno -2] Name or service not known',))': /simple/ansible/
+  Retrying (Retry(total=3, connect=None, read=None, redirect=None)) after connection broken by 'ProxyError('Cannot connect to proxy.', NewConnectionError('<pip._vendor.requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x22636d0>: Failed to establish a new connection: [Errno -2] Name or service not known',))': /simple/ansible/
+
+
+===========
+
+pip install ansible==2.3.0.0 --proxy http://XXXXXX:9400 --trusted-host pypi.python.org
+
+===========
