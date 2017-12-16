@@ -2,4 +2,6 @@ How to delete multiple repo from github
 
 # cat repos | while read r; do curl -XDELETE -H 'Authorization: token <token needs to generate from githb>' "https://api.github.com/repos/<username>/$r"; done
 
+Login to github.com > Profile > Settings > Developer settings > Generate New token
+
 We need to mention the API github URL not the webbased URL
