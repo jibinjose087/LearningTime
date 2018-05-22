@@ -10,3 +10,10 @@ Collecting ansible==2.3.0.0
 pip install ansible==2.3.0.0 --proxy http://XXXXXX:9400 --trusted-host pypi.python.org
 
 ===========
+-------------------
+Loaded plugins: amazon-id, rhui-lb, search-disabled-repos
+No package container-selinux available.
+Error: Nothing to do
+[root@ip-172-31-23-100 ~]# yum-config-manager --enable rhui-REGION-rhel-server-extras
+yum-config-manager --enable rhui-rhel-7-server-rhui-extras-rpms
+
