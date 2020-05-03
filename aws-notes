@@ -1,0 +1,3 @@
+delete s3 command line
+
+aws s3 rb s3://bucket-name --force  
