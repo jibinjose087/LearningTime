@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion : 2010-09-09
+Parameters:
+  BucketName:
+    Type: String
+  Function:
+    Type: String
+    Default: "demo-ProcessingLambdaFunction-150GME5KXXSXV"
+  Region:
+    Type: String
+    Default: "xxxxxxxxxxxxxxx"
+  Account:
+    Type: String
+    Default: "xxxxxxxxxxxxxxx"
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      NotificationConfiguration:
+        LambdaConfigurations:
+          - Event: s3:ObjectCreated:*
+            # Function: !Sub 'arn:aws:lambda:xxxxxxxxxxxxxxx:xxxxxxxxxxxxxxx:function:demo-ProcessingLambdaFunction-150GME5KXXSXV'
+            Function: !Sub 'arn:aws:lambda:${Region}:${Account}:function:${Function}'
+            Filter:
+              S3Key:
+                Rules:
+                - Name: suffix
+                  Value: .txt
