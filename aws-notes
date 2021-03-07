@@ -1,3 +1,7 @@
 delete s3 command line
 
 aws s3 rb s3://bucket-name --force  
+
+Containers
+
+https://aws.amazon.com/blogs/containers/how-to-use-multiple-load-balancer-target-group-support-for-amazon-ecs-to-access-internal-and-external-service-endpoint-using-the-same-dns-name/
